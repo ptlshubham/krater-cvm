@@ -973,6 +973,7 @@ input, select, textarea {
 		padding: 0 0.75em;
 	}
 
+	
 		#thumbnails article {
 			position: relative;
 			width: 50%;
@@ -988,6 +989,7 @@ input, select, textarea {
 				outline: 0;
 			}
 
+			
 				#thumbnails article .thumbnail img {
 					display: block;
 					width: 100%;
@@ -1216,14 +1218,294 @@ input, select, textarea {
 				-ms-transition: opacity 0.5s ease-in-out;
 				transition: opacity 0.5s ease-in-out;
 				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
+				
+				/* left:20%; */
+				
 				height: 100%;
 				background-repeat: no-repeat;
-				background-size: cover;
+				background-size: contain ;
+				background-position: center !important;
 				opacity: 0;
 			}
+
+			/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+	#viewer .slide .image {
+		-moz-transition: opacity 0.5s ease-in-out;
+		-webkit-transition: opacity 0.5s ease-in-out;
+		-ms-transition: opacity 0.5s ease-in-out;
+		transition: opacity 0.5s ease-in-out;
+		position: absolute;
+		width: 100%;
+		
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: contain ;
+		background-position: center !important;
+		opacity: 0;
+	}
+	
+  }
+  
+  /* 
+	##Device = Laptops, Desktops
+	##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+	
+	#viewer .slide .image {
+
+		-moz-transition: opacity 0.5s ease-in-out;
+		-webkit-transition: opacity 0.5s ease-in-out;
+		-ms-transition: opacity 0.5s ease-in-out;
+		transition: opacity 0.5s ease-in-out;
+		position: absolute;
+		width: 50%;
+		left:20%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: contain ;
+		background-position: center !important;
+		opacity: 0;
+	}
+	
+  }
+  
+  /* 
+	##Device = Tablets, Ipads (portrait)
+	##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+	
+	#viewer .slide .image {
+
+		-moz-transition: opacity 0.5s ease-in-out;
+		-webkit-transition: opacity 0.5s ease-in-out;
+		-ms-transition: opacity 0.5s ease-in-out;
+		transition: opacity 0.5s ease-in-out;
+		position: absolute;
+		width: 100%;
+	
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: contain ;
+		background-position: center !important;
+		opacity: 0;
+	}
+	
+  }
+  
+  /* 
+	##Device = Tablets, Ipads (landscape)
+	##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	
+	#viewer .slide .image {
+
+		-moz-transition: opacity 0.5s ease-in-out;
+		-webkit-transition: opacity 0.5s ease-in-out;
+		-ms-transition: opacity 0.5s ease-in-out;
+		transition: opacity 0.5s ease-in-out;
+		position: absolute;
+		width: 100%;
+		
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center !important;
+		opacity: 0;
+	}
+	
+  }
+  
+  /* 
+	##Device = Low Resolution Tablets, Mobiles (Landscape)
+	##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+	
+	#viewer .slide .image {
+
+		width: 100%;
+		/* left:5%; */
+		background-size: contain;
+		
+	}
+	
+  }
+  
+  /* 
+	##Device = Most of the Smartphones Mobiles (Portrait)
+	##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+	
+	#viewer .slide .image {
+
+		width: 100%;
+		/* left:10%; */
+		background-size: contain;
+		
+	}
+
+
+
+
+
+	
+  }
+
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+	#viewer .slide .image {
+	width: 100%;
+		/* left:10%; */
+		background-size: contain;
+	}
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+	#viewer .slide .image {
+		width: 100%;
+			/* left:10%; */
+			background-size: contain;
+		}
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+	#viewer .slide .image {
+		width: 100%;
+			/* left:10%; */
+			background-size: contain;
+		}
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+	#viewer .slide .image {
+		width: 100%;
+			/* left:10%; */
+			background-size: contain;
+		}
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+	#viewer .slide .image {
+		width: 100%;
+			/* left:10%; */
+			background-size: contain;
+		}
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+	#viewer .slide .image {
+		width: 100%;
+			/* left:10%; */
+			background-size: contain;
+		}
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+	#viewer .slide .image {
+		width: 100%;
+			/* left:10%; */
+			background-size: contain;
+		}
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+	#viewer .slide .image {
+		width: 100%;
+			/* left:10%; */
+			background-size: contain;
+		}
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+
+	#viewer .slide .image {
+		width: 100%;
+			/* left:10%; */
+			background-size: contain;
+		}
+}
 
 			#viewer .slide:before {
 				-moz-animation: spinner 1s linear infinite;
